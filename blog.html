@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블로그 | 공항 셔츠룸 추천 브로들의 생생정보</title>
+    <meta name="description" content="공항 셔츠룸 추천, 거침없는 브로가 전하는 리얼 팁. 강남 스타일 셔츠룸부터 인천, 김포까지 진짜 정보만 담았다. 지금 010-6279-0862로 콜!">
+    <meta name="keywords" content="공항 셔츠룸,공항 셔츠룸 추천,공항 셔츠룸 후기,인천 셔츠룸,김포 셔츠룸,셔츠룸 브로,강남 스타일 셔츠룸,블로그">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-acid-yellow">
+    <link rel="canonical" href="https://t3b05-gh-shirts-rc.vercel.app/blog">
+    <meta property="og:title" content="블로그 | 공항 셔츠룸 추천 브로들의 생생정보">
+    <meta property="og:description" content="공항 셔츠룸 추천, 거침없는 브로가 전하는 리얼 팁. 강남 스타일 셔츠룸부터 인천, 김포까지 진짜 정보만 담았다. 지금 010-6279-0862로 콜!">
+    <style>
+        /* 핵심 CSS 패턴: hamburger-menu, responsive-768 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2a2a2a;
+            --text-primary: #f0ebe3;
+            --text-secondary: #b0aba3;
+            --accent-yellow: #e6d600;
+            --accent-yellow-dark: #b8a800;
+            --font-mono: 'Courier New', Courier, monospace;
+            --border-thick: 4px solid var(--accent-yellow);
+            --shadow-hard: 8px 8px 0 #000;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-mono);
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        a {
+            color: var(--accent-yellow);
+            text-decoration: none;
+        }
+        a:hover {
+            color: #fff;
+        }
+
+        /* 헤더 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: var(--border-thick);
+            margin-bottom: 40px;
+        }
+
+        .logo a {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            color: var(--accent-yellow);
+            text-shadow: 2px 2px 0 #000;
+        }
+
+        /* 햄버거 내비게이션 */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 30px;
+            height: 24px;
+            position: relative;
+            z-index: 10;
+        }
+        .nav-toggle span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: var(--accent-yellow);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        nav ul li a {
+            font-size: 1rem;
+            text-transform: uppercase;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        nav ul li a:hover,
+        nav ul li a.active {
+            border-bottom-color: var(--accent-yellow);
+            color: #fff;
+        }
+
+        /* 모바일 반응형 */
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background: var(--bg-secondary);
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                padding: 20px;
+                border: var(--border-thick);
+                box-shadow: var(--shadow-hard);
+                z-index: 5;
+            }
+            nav ul.open {
+                display: flex;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            header {
+                flex-wrap: wrap;
+                position: relative;
+            }
+            .logo {
+                flex: 1;
+            }
+        }
+
+        /* 메인 콘텐츠 */
+        main {
+            min-height: 60vh;
+        }
+
+        .blog-post {
+            background: var(--bg-secondary);
+            padding: 30px;
+            border: var(--border-thick);
+            box-shadow: var(--shadow-hard);
+            margin-bottom: 40px;
+        }
+
+        .blog-post h1 {
+            font-size: 2.2rem;
+            color: var(--accent-yellow);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .blog-post .meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+            border-bottom: 1px dashed var(--accent-yellow);
+            padding-bottom: 10px;
+        }
+
+        .blog-post .content p {
+            margin-bottom: 1.5em;
+        }
+        .blog-post .content h2 {
+            color: var(--accent-yellow);
+            margin: 30px 0 15px;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+        }
+        .blog-post .content blockquote {
+            border-left: 5px solid var(--accent-yellow);
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+        .blog-post .content ul {
+            margin: 15px 0;
+            padding-left: 25px;
+            list-style: square;
+        }
+        .blog-post .content li {
+            margin-bottom: 8px;
+        }
+
+        /* 푸터 */
+        footer {
+            margin-top: 60px;
+            padding: 30px 0;
+            border-top: var(--border-thick);
+            text-align: center;
+        }
+        footer .contact {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--accent-yellow);
+            margin-bottom: 10px;
+        }
+        footer p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        /* 유틸 */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">셔츠룸 브로</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul id="navMenu">
+                <li><a href="/">홈</a></li>
+                <li><a href="/region">지역</a></li>
+                <li><a href="/reviews">후기</a></li>
+                <li><a href="/blog" class="active">블로그</a></li>
+                <li><a href="/contact">문의</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <article class="blog-post">
+            <h1>공항 셔츠룸 추천: 브로가 알려주는 진짜 팁</h1>
+            <div class="meta">
+                <span>작성: 브로</span> · <span>2025.03.28</span> · <span>조회 1,247</span>
+            </div>
+            <div class="content">
+                <p>야, 형들. 공항에서 진짜 셔츠룸 찾고 있냐? 인터넷에 떠도는 정보는 다 뻥이고 가짜야. 내가 직접 발로 뛰고 경험한 공항 셔츠룸 추천, 거침없이 까발린다.</p>
+
+                <h2>1. 강남 스타일? 여기서도 가능하다</h2>
+                <p>공항 근처라고 다 구린 거 아니다. 인근에 강남 급으로 잘 차린 곳이 몇 군데 있어. 특히 인천 쪽은 룸 컨디션도 좋고, 마인드도 프로페셔널해. 근데 중요한 건 <strong>진짜 정보</strong>를 가진 브로를 만나야 한다는 거야. 내가 추천하는 곳은 전화 한 통이면 바로 연결된다. 010-6279-0862, 이 번호만 기억해.</p>
+
+                <blockquote>
+                    “공항 셔츠룸? 강남보다 낫다는 말 나오는 곳이 있어. 근데 아무한테나 알려주는 거 아니다.”
+                </blockquote>
+
+                <h2>2. 김포 vs 인천, 어디가 더 낫냐?</h2>
+                <p>둘 다 장단점이 있어. 김포는 접근성, 인천은 규모와 퀄리티. 근데 진짜 찐은 <strong>인천 셔츠룸</strong>이야. 공항 바로 옆이라 비행기 타기 전에 후딱 즐기고 갈 수 있고, 시설도 더 신식이야. 김포는 구도심에 있다 보니 옛날 스타일 감성 원하는 형한테 추천한다.</p>
+
+                <ul>
+                    <li>인천: 시설 최신, 규모 큼, 주차 편리</li>
+                    <li>김포: 접근성 좋음, 가격 착함, 올드 스쿨</li>
+                    <li>공항 근처: 생각보다 다양한 옵션 많음</li>
+                </ul>
+
+                <h2>3. 사기 당하지 않는 법</h2>
+                <p>인터넷 후기 90%는 광고야. 진짜 후기는 전화 통화에서 드러나. 업주가 너무 친절하거나 가격이 지나치게 싸면 의심해라. 내 전화번호는 <strong>010-6279-0862</strong>, 형들 직접 물어봐. 내가 확실히 알려준다.</p>
+
+                <p>결론: 공항에서 셔츠룸 찾는다면, 발품 팔지 말고 브로한테 전화해. 시간과 돈 아끼는 거야. 진짜 정보는 거래가 아니라 신뢰에서 나오는 거다.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="contact">📞 010-6279-0862</div>
+        <p>셔츠룸 브로 – 진짜 정보를 원한다면 지금 바로 콜!<br>공항 셔츠룸, 인천 셔츠룸, 김포 셔츠룸 추천 &amp; 후기</p>
+    </footer>
+
+    <script>
+        // 햄버거 메뉴 토글 스크립트
+        const toggleBtn = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        toggleBtn.addEventListener('click', function() {
+            navMenu.classList.toggle('open');
+        });
+
+        // 메뉴 외부 클릭 시 닫기
+        document.addEventListener('click', function(event) {
+            if (!toggleBtn.contains(event.target) && !navMenu.contains(event.target)) {
+                navMenu.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>
