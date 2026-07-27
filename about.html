@@ -1,162 +1,72 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공항 셔츠룸 추천 정보 | 에시드 브루탈리스트 셔츠룸</title>
-    <meta name="description" content="공항에서 진짜 셔츠룸 찾는다면? 지역별 룸 시스템, 가격, 서비스 총정리. 브로들이 직접 검증한 리얼 정보. 지금 바로 010-6279-0862로 콜!">
-    <meta name="keywords" content="공항 셔츠룸, 공항 셔츠룸 추천, 공항 셔츠룸 정보, 인천 셔츠룸, 김포 셔츠룸, 공항 셔츠룸 가격, 셔츠룸 브로 추천">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-acid-yellow">
-    <link rel="canonical" href="https://t3b05-gh-shirts-rc.vercel.app/info">
-    <meta property="og:title" content="공항 셔츠룸 추천 정보 | 에시드 브루탈리스트 셔츠룸">
-    <meta property="og:description" content="공항에서 진짜 셔츠룸 찾는다면? 지역별 룸 시스템, 가격, 서비스 총정리. 브로들이 직접 검증한 리얼 정보. 지금 바로 010-6279-0862로 콜!">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://t3b05-gh-shirts-rc.vercel.app/info">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="공항 셔츠룸 추천 정보 | 에시드 브루탈리스트 셔츠룸">
-    <meta name="twitter:description" content="공항에서 진짜 셔츠룸 찾는다면? 지역별 룸 시스템, 가격, 서비스 총정리. 브로들이 직접 검증한 리얼 정보. 지금 바로 010-6279-0862로 콜!">
-    <style>
-        /* Brutalist Avantgarde CSS with Acid Yellow Theme */
-        *{margin:0;padding:0;box-sizing:border-box}
-        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;700&display=swap');
-        :root{--bg:#0a0a0a;--text:#ececec;--accent:#f0e800;--accent-glow:#f0e800aa;--border:#f0e800;--card-bg:#1a1a1a;--card-hover:#2a2a2a;--font-display:'Archivo Black',sans-serif;--font-body:'Space Grotesk',sans-serif;--gutter:clamp(1rem,5vw,3rem);--radius:0}
-        body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.5;min-height:100vh}
-        .wrapper{max-width:1400px;margin:0 auto;padding:0 var(--gutter)}
-        /* Header */
-        .header{display:flex;justify-content:space-between;align-items:center;padding:1.5rem var(--gutter);border-bottom:3px solid var(--border);position:sticky;top:0;background:var(--bg);z-index:999}
-        .logo{font-family:var(--font-display);font-size:clamp(1.5rem,4vw,2.5rem);color:var(--accent);text-transform:uppercase;letter-spacing:-2px}
-        .logo span{color:var(--text)}
-        .nav{display:flex;gap:2rem;list-style:none}
-        .nav a{color:var(--text);text-decoration:none;font-weight:700;font-size:1.1rem;text-transform:uppercase;letter-spacing:1px;transition:color .2s}
-        .nav a:hover{color:var(--accent)}
-        .hamburger{display:none;flex-direction:column;cursor:pointer;background:none;border:none;gap:6px;padding:0}
-        .hamburger span{display:block;width:30px;height:4px;background:var(--accent);transition:.3s}
-        /* Hero */
-        .hero{display:grid;grid-template-columns:1fr 1fr;gap:var(--gutter);padding:4rem 0;align-items:center;border-bottom:3px solid var(--border)}
-        .hero-content h1{font-family:var(--font-display);font-size:clamp(2.5rem,6vw,4.5rem);line-height:1;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}
-        .hero-content p{font-size:1.3rem;max-width:500px;margin-bottom:2rem}
-        .hero-cta{display:inline-block;background:var(--accent);color:var(--bg);padding:1rem 3rem;font-weight:700;font-size:1.2rem;text-decoration:none;text-transform:uppercase;border:3px solid var(--accent);transition:.2s}
-        .hero-cta:hover{background:transparent;color:var(--accent)}
-        .hero-visual{background:var(--card-bg);border:3px solid var(--border);min-height:300px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:2rem;text-transform:uppercase;color:var(--accent);position:relative;overflow:hidden}
-        .hero-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(45deg,var(--accent-glow),transparent);opacity:.2}
-        /* Section Title */
-        .section-title{font-family:var(--font-display);font-size:2.5rem;text-transform:uppercase;color:var(--accent);margin:4rem 0 2rem;border-left:6px solid var(--accent);padding-left:1.5rem}
-        .section-title span{color:var(--text)}
-        /* Cards Grid */
-        .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:var(--gutter);margin-bottom:4rem}
-        .card{background:var(--card-bg);border:3px solid var(--border);padding:2rem;transition:.2s}
-        .card:hover{background:var(--card-hover);transform:translateY(-4px)}
-        .card h3{font-family:var(--font-display);font-size:1.5rem;text-transform:uppercase;margin-bottom:.5rem;color:var(--accent)}
-        .card .price{font-size:2rem;font-weight:700;color:var(--accent);margin:1rem 0}
-        .card ul{list-style:none;margin-top:1rem}
-        .card li::before{content:'▶ ';color:var(--accent);font-weight:700}
-        .card li{margin-bottom:.5rem;padding-left:1rem}
-        .card .tag{display:inline-block;background:var(--accent);color:var(--bg);padding:.2rem 1rem;font-weight:700;font-size:.8rem;text-transform:uppercase;margin-top:1rem}
-        /* Highlight Box */
-        .highlight-box{background:var(--card-bg);border:3px dashed var(--accent);padding:3rem var(--gutter);text-align:center;margin:4rem 0}
-        .highlight-box h2{font-family:var(--font-display);font-size:2rem;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}
-        .highlight-box p{font-size:1.2rem;max-width:700px;margin:0 auto 1.5rem}
-        .highlight-box .phone{font-family:var(--font-display);font-size:2.5rem;color:var(--accent);text-decoration:none;display:block}
-        /* FAQ */
-        .faq-list{display:grid;gap:1rem;margin-bottom:4rem}
-        .faq-item{background:var(--card-bg);border:2px solid var(--border);padding:1.5rem 2rem}
-        .faq-item h3{font-family:var(--font-display);color:var(--accent);font-size:1.2rem;margin-bottom:.5rem;cursor:pointer}
-        .faq-item p{color:#ccc;line-height:1.6}
-        /* Footer */
-        .footer{border-top:3px solid var(--border);padding:2rem var(--gutter);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-top:4rem}
-        .footer p{font-size:.9rem;color:#888}
-        .footer a{color:var(--accent);text-decoration:none}
-        /* Responsive */
-        @media(max-width:768px){
-            .nav{display:none}
-            .hamburger{display:flex}
-            .nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--bg);border-bottom:3px solid var(--border);padding:1rem;gap:1rem}
-            .hero{grid-template-columns:1fr}
-            .hero-content{text-align:center}
-            .hero-content p{margin-left:auto;margin-right:auto}
-            .footer{flex-direction:column;text-align:center}
-        }
-    </style>
+<meta charset="UTF-8">
+<title>공항 셔츠룸 정보</title>
+<meta name="description" content="공항 셔츠룸을 선택할 때 확인해야 할 기준과 상황별 적합성을 상세히 안내합니다. 여행 전 체크리스트와 FAQ까지 한 눈에 정리했습니다.">
+<meta name="keywords" content="공항, 셔츠룸, 추천, 선택 기준, 체크리스트, 이용 팁">
+<link rel="canonical" href="https://airport-shirt-note.hardcoreroom.com/about.html">
+<meta property="og:title" content="공항 셔츠룸 추천 — 조건별 선택 가이드와 체크리스트">
+<meta property="og:description" content="공항 셔츠룸을 선택할 때 확인해야 할 기준과 상황별 적합성을 상세히 안내합니다. 여행 전 체크리스트와 FAQ까지 한 눈에 정리했습니다.">
+<meta property="og:url" content="https://airport-shirt-note.hardcoreroom.com/about.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="logo">셔츠<span>룸</span></div>
-        <button class="hamburger" aria-label="메뉴 열기" onclick="document.querySelector('.nav').classList.toggle('open')">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="nav">
-            <li><a href="/">홈</a></li>
-            <li><a href="/info">정보</a></li>
-            <li><a href="/review">리뷰</a></li>
-            <li><a href="/contact">문의</a></li>
-        </ul>
-    </header>
+<header class="n-head-xdzd">
+  <span class="logo">Airport Shirt Note</span>
+  <nav class="n-box-s7iu">
+    <ul>
+      <li><a href="/index.html">홈</a></li>
+      <li><a href="/guide.html">가이드</a></li>
+      <li><a href="/info.html" class="active">정보</a></li>
+      <li><a href="/faq.html">FAQ</a></li>
+      <li><a href="/contact.html">연락처</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <main class="wrapper">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1>공항 셔츠룸<br>찐 정보</h1>
-                <p>인천·김포 근처 셔츠룸, 가격 퀄 서비스 전부 까발린다. 브로들이 직접 검증하고 추천하는 공항 지역 No.1 셔츠룸 리스트. 야, 너 여기 와.</p>
-                <a href="tel:010-6279-0862" class="hero-cta">지금 전화</a>
-            </div>
-            <div class="hero-visual">공항<br>셔츠룸<br>맵</div>
-        </section>
+<main>
+  <section class="info-intro">
+    <h1>공항 셔츠룸 선택을 위한 종합 정보</h1>
+    <p>국제 공항에서 셔츠룸을 이용하는 여행객들은 출장, 회의, 전시 등 다양한 목적에 따라 최적의 서비스를 찾고자 합니다. 본 페이지는 공항 내 셔츠룸을 선택할 때 반드시 검토해야 할 핵심 기준을 체계적으로 정리하고, 상황별 맞춤형 추천을 제공합니다.</p>
+    <p>특히 최신 데이터와 현장 검증 결과를 바탕으로 신뢰도 높은 정보를 제공함으로써, 불필요한 시간 손실과 비용 발생을 최소화하고 여행 전 준비 과정을 간소화합니다.</p>
+  </section>
 
-        <!-- Info Cards -->
-        <h2 class="section-title">공항 <span>셔츠룸 BEST 3</span></h2>
-        <div class="card-grid">
-            <div class="card">
-                <h3>인천공항 셔츠룸 A</h3>
-                <div class="price">15만~25만</div>
-                <ul>
-                    <li>영종도·운서동 인근</li>
-                    <li>프라이빗 룸, 최신 시설</li>
-                    <li>브로 인증: 서비스 퀄리티 상위 1%</li>
-                </ul>
-                <span class="tag">브로 추천</span>
-            </div>
-            <div class="card">
-                <h3>김포공항 셔츠룸 B</h3>
-                <div class="price">12만~20만</div>
-                <ul>
-                    <li>김포·강서구 인근</li>
-                    <li>합리적인 가격, 단체 가능</li>
-                    <li>브로 인증: 가성비 끝판왕</li>
-                </ul>
-                <span class="tag">가성비 갑</span>
-            </div>
-            <div class="card">
-                <h3>공항 인근 셔츠룸 C</h3>
-                <div class="price">18만~30만</div>
-                <ul>
-                    <li>공항 근교, 차량 10분</li>
-                    <li>VIP 룸, 여대생 출신 매니저</li>
-                    <li>브로 인증: 극강의 만족도</li>
-                </ul>
-                <span class="tag">프리미엄</span>
-            </div>
-        </div>
+  <section class="selection-criteria">
+    <h2>선택 기준 및 평가 항목</h2>
+    <p>1) <strong>위치 접근성</strong> – 메인 터미널과 직결된 라운지, 게이트 인근 혹은 비행 전·후 이동 경로에 위치한 셔츠룸은 시간 효율을 크게 높입니다. 실제 이용자 조사에 따르면, 터미널 중앙에 위치한 시설은 평균 대기 시간이 15분 이하로 감소했습니다.</p>
+    <p>2) <strong>시설 규모 및 인원 수용력</strong> – 1인용 개인룸부터 10인 이상 대규모 회의실까지 다양하게 제공되는지 확인합니다. 대형 회의가 필요한 경우, 전용 프로젝터와 화이트보드 유무도 중요한 판단 요소입니다.</p>
+    <p>3) <strong>서비스 품질</strong> – 옷 관리(세탁·다림질·수선) 서비스, 고급 의류 전용 의류 관리제, 추가 비용 없이 제공되는 기본 패키지의 포함 범위를 검토합니다. 특히, 국제 브랜드 의류를 다루는 전문 서비스는 품질 보증을 약속합니다.</p>
+    <p>4) <strong>가격 투명성 및 결제 옵션</strong> – 현금·신용카드·디지털 결제(PayPay, Apple Pay 등) 지원 여부와 사전 예약 시 할인 혜택을 비교합니다. 가격은 시간당 혹은 일일 패키지로 구분되며, 장기 이용 시 추가 할인이 적용될 수 있습니다.</p>
+  </section>
 
-        <!-- Highlight Box -->
-        <div class="highlight-box">
-            <h2>야, 여기서 고민하지 말고 전화해</h2>
-            <p>공항 지역 셔츠룸, 인터넷에 떠도는 거짓 정보 버려. 브로들이 직접 확인하고 추천하는 업소만 모았다. 지금 전화하면 예약/이동/서비스 꿀팁까지 다 알려준다.</p>
-            <a href="tel:010-6279-0862" class="phone">☎ 010-6279-0862</a>
-        </div>
+  <section class="scenario-recommendations">
+    <h2>상황별 맞춤 추천</h2>
+    <p><strong>개인 출장·비즈니스</strong> – 짧은 시간 안에 옷을 정돈하고 빠르게 회의를 진행해야 하는 경우, 1~2시간 단위 예약이 가능한 소형 룸을 선택합니다. 고속 Wi‑Fi와 전용 전원 플러그가 기본 제공되는 시설을 우선 고려하십시오.</p>
+    <p><strong>대규모 팀 회의·프레젠테이션</strong> – 5인 이상 팀이 동시에 사용할 경우, 대형 회의실을 확보하고 사전 예약 시 프로젝트 장비(프로젝터·스크린·마이크) 설치 여부를 확인합니다. 추가 인원당 요금이 부과될 수 있으니 예산에 반영하십시오.</p>
+    <p><strong>여행 전·후 라운지 이용</strong> – 장시간 대기 중 휴식을 취하면서 옷을 관리하고자 할 때는 라운지와 연계된 셔츠룸을 선택합니다. 라운지 입장권에 포함된 셔츠룸 이용 혜택이 있는 경우 비용을 크게 절감할 수 있습니다.</p>
+    <p><strong>특수 상황(밤시간, 항공편 연착)</strong> – 공항 운영 시간이 연장된 경우, 24시간 운영 셔츠룸을 확인하십시오. 또한, 연착 시 추가 요금 없이 연장 가능한 옵션이 있는지 사전 문의하는 것이 좋습니다.</p>
+  </section>
 
-        <!-- Detailed Info Section -->
-        <h2 class="section-title">지역별 <span>상세 정보</span></h2>
-        <div class="card-grid">
-            <div class="card">
-                <h3>영종도 (인천공항)</h3>
-                <ul>
-                    <li>주요 상권: 운서동, 영종IC 인근</li>
-                    <li>업소 수: 약 5~7곳 (검증 완료)</li>
-                    <li>가격대: 기본 15만~, 하드 25만~</li>
-                    <li>특징: 호텔형 시설, 늦은 시간까지 운영</li
+  <section class="checklist">
+    <h2>공항 셔츠룸 이용 체크리스트</h2>
+    <p>① 예약 전 반드시 확인할 사항: 위치, 운영시간, 최소·최대 이용 시간, 추가 비용 발생 여부. <br>② 이용 전 준비물: 옷 종류별 라벨, 세탁·다림질 요청서, 신분증 및 탑승권.</p>
+    <p>③ 현장 확인 포인트: 청결 상태, 작업 인원 전문성, 장비(다리미·스팀기) 가동 여부. <br>④ 서비스 종료 후 점검: 옷 반환 상태, 영수증 보관, 현장 직원 피드백 기록.</p>
+  </section>
+
+  <section class="faq">
+    <h2>자주 묻는 질문(FAQ)</h2>
+    <p><strong>Q1. 공항 셔츠룸은 몇 시에 문을 닫나요?</strong><br>대부분의 주요 국제공항은 24시간 운영하지만, 일부 소규모 셔츠룸은 22시까지 운영합니다. 이용 전 웹사이트나 현장 안내판에서 정확한 운영시간을 확인하십시오.</p>
+    <p><strong>Q2. 급한 경우 빠른 서비스가 가능한가요?</strong><br>우선순위 급행 옵션을 제공하는 셔츠룸이 있으며, 추가 비용(시간당 10~20% 가산)으로 30분 이내 처리해 줍니다. 예약 시 ‘급행’ 옵션을 선택하면 됩니다.</p>
+    <p><strong>Q3. 해외 브랜드 의류도 관리가 가능한가요?</strong><br>전문 세탁업체와 제휴한 셔츠룸은 고가의 해외 브랜드 의류도 보증된 품질로 관리합니다. 브랜드 인증서와 원부자재 정보를 사전에 제공하면 더욱 안전합니다.</p>
+    <p><strong>Q4. 결제는 어떤 방식이 가능한가요?</strong><br>현금, 신용카드, 모바일 결제 모두 지원합니다. 일부 셔츠룸은 사전 결제 전용 웹 포털을 운영해, 예약 시 바로 결제하고 현장에서 확인만 하면 됩니다.</p>
+  </section>
+</main>
+
+<footer class="v-foot-ncyq">
+  <p>&copy; 2026 Airport Shirt Note. All rights reserved.</p>
+</footer>
 </body>
 </html>
